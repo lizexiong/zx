@@ -1,0 +1,107 @@
+{% extends "common/index.html" %}
+
+
+{% block left %}
+
+
+<aside class="Hui-aside">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+
+        <a  role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <p class="glyphicon glyphicon-star-empty">&thinsp;主机分类</p>&thinsp;&thinsp;&thinsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <i class="Hui-iconfont menu_dropdown-arrow"></i>
+        </a>
+
+    </div>
+
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+        <ul id="treeDemo" class="ztree" style="height:100%;"></ul>
+    </div>
+	<div class="menu_dropdown bk_2">
+
+		<dl id="menu-product">
+
+			<dt><i class="Hui-iconfont">&#xe620;</i> 常用工具<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+
+				<ul>
+                    <li><a data-href="/ipop_zx/ip_calculate"  data-title="IP地址分配" href="javascript:void(0)">IP地址分配</a></li>
+					<li><a data-href="product-category.html" data-title="分类管理" href="javascript:void(0)">分类管理</a></li>
+					<li><a data-href="/ipop_zx/host_list" data-title="产品管理" href="javascript:void(0)">产品管理</a></li>
+			</ul>
+		</dd>
+	</dl>
+
+		<dl id="menu-member">
+			<dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="member-list.html" data-title="会员列表" href="javascript:;">会员列表</a></li>
+					<li><a data-href="member-del.html" data-title="删除的会员" href="javascript:;">删除的会员</a></li>
+					<li><a data-href="member-level.html" data-title="等级管理" href="javascript:;">等级管理</a></li>
+					<li><a data-href="member-scoreoperation.html" data-title="积分管理" href="javascript:;">积分管理</a></li>
+					<li><a data-href="member-record-browse.html" data-title="浏览记录" href="javascript:void(0)">浏览记录</a></li>
+					<li><a data-href="member-record-download.html" data-title="下载记录" href="javascript:void(0)">下载记录</a></li>
+					<li><a data-href="member-record-share.html" data-title="分享记录" href="javascript:void(0)">分享记录</a></li>
+			</ul>
+		</dd>
+	</dl>
+		<dl id="menu-admin">
+			<dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="admin-role.html" data-title="角色管理" href="javascript:void(0)">角色管理</a></li>
+					<li><a data-href="admin-permission.html" data-title="权限管理" href="javascript:void(0)">权限管理</a></li>
+					<li><a data-href="admin-list.html" data-title="管理员列表" href="javascript:void(0)">管理员列表</a></li>
+			</ul>
+		</dd>
+	</dl>
+		<dl id="menu-tongji">
+			<dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+			<dd>
+				<ul>
+					<li><a data-href="charts-1.html" data-title="折线图" href="javascript:void(0)">折线图</a></li>
+					<li><a data-href="charts-2.html" data-title="时间轴折线图" href="javascript:void(0)">时间轴折线图</a></li>
+					<li><a data-href="charts-3.html" data-title="区域图" href="javascript:void(0)">区域图</a></li>
+					<li><a data-href="charts-4.html" data-title="柱状图" href="javascript:void(0)">柱状图</a></li>
+					<li><a data-href="charts-5.html" data-title="饼状图" href="javascript:void(0)">饼状图</a></li>
+					<li><a data-href="charts-6.html" data-title="3D柱状图" href="javascript:void(0)">3D柱状图</a></li>
+					<li><a data-href="charts-7.html" data-title="3D饼状图" href="javascript:void(0)">3D饼状图</a></li>
+			</ul>
+		</dd>
+	</dl>
+
+</div>
+</aside>
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<section class="Hui-article-box">
+	<div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+		<div class="Hui-tabNav-wp">
+			<ul id="min_title_list" class="acrossTab cl">
+				<li class="active">
+					<a href="ipop_zx/welcome" target="RightFrame"><span title="主页" data-href="ipop_zx/welcome">主页</span></a>
+					<em></em></li>
+		</ul>
+	</div>
+		<div name='zexiong' class="Hui-tabNav-more btn-group"><a id="js-tabNav-prev" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d4;</i></a><a id="js-tabNav-next" class="btn radius btn-default size-S" href="javascript:;"><i class="Hui-iconfont">&#xe6d7;</i></a></div>
+</div>
+	<div id="iframe_box" class="Hui-article">
+		<div class="show_iframe">
+			<div style="display:none" class="loading"></div>
+			<iframe id="RightFrame" name='RightFrame' title="RightFrame" scrolling="yes" frameborder="0" src="ipop_zx/welcome"></iframe>
+	</div>
+</div>
+</section>
+
+
+
+{% endblock %}
